@@ -1,0 +1,29 @@
+using System;
+
+namespace CSharpBasics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1-) C# Programlama Dili Nedir? Hangi Alanlarda Kullanılır?
+            /*
+                - C# Microsoft tarafından geliştirilmiş nesne yönelimli bir programlama dilidir.
+                - Masaüstü, web ve mobil uygulamalar, oyun geliştirme (Unity), veri analizi, yapay zeka gibi alanlarda kullanılır.
+            */
+
+            // 2-) Bir Programın Çalışması İçin Temel Bileşenler
+            /*
+                - Derleyici: Kodu makine diline çevirir.
+                - RAM: Çalışan programların verilerini geçici olarak depolar.
+                - CPU: Programın işlemlerini yürütür.
+                - Depolama: Program ve verileri uzun süreli saklar.
+            */
+
+            // 3-) Kullanıcıdan Adını Alıp Ekrana Yazdıran Basit C# Programı
+            Console.Write("Adınızı girin: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Merhaba, {name}!");
+        }
+    }
+}
