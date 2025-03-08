@@ -1,0 +1,49 @@
+using System;
+
+namespace CSharpArrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1-) Dizi (Array) Nedir? Ne İşe Yarar? Gerçek Hayattan Örnek
+            /*
+                - Dizi (Array), aynı türdeki verileri tek bir değişkende saklamaya yarayan bir veri yapısıdır.
+                - Örneğin, bir sınıftaki öğrencilerin notlarını tek tek değişkenlerde saklamak yerine bir dizi içinde saklayabiliriz.
+                - Gerçek Hayat Örneği: 
+                    "Bir hafta boyunca hava sıcaklıklarını bir dizide saklamak."
+                    int[] sicakliklar = { 20, 22, 19, 25, 21, 18, 23 };
+            */
+
+            // 2-) 5 Elemanlı Bir int Dizisi Oluşturup Kullanıcıdan Değer Alıp Ekrana Yazdırma
+            int[] numbers = new int[5];
+            
+            Console.WriteLine("Lütfen 5 adet sayı girin:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write($"{i + 1}. sayıyı girin: ");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            
+            Console.WriteLine("Girdiğiniz sayılar:");
+            foreach (int num in numbers)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+
+            // 3-) Bir Dizinin İçindeki En Büyük Sayıyı Bulan Program
+            int maxNumber = numbers[0];
+            
+            foreach (int num in numbers)
+            {
+                if (num > maxNumber)
+                {
+                    maxNumber = num;
+                }
+            }
+            
+            Console.WriteLine($"Dizideki en büyük sayı: {maxNumber}");
+        }
+    }
+}
