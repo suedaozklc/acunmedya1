@@ -1,0 +1,37 @@
+using System;
+
+namespace CSharpDataTypes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1-) C#’ta Kullanılan Temel Veri Tipleri
+            /*
+                - int: 4 byte (Tamsayı verileri için kullanılır.)
+                - double: 8 byte (Ondalıklı sayılar için kullanılır.)
+                - float: 4 byte (Ondalıklı sayılar için kullanılır, double’a göre daha düşük hassasiyetlidir.)
+                - char: 2 byte (Tek bir karakter tutar.)
+                - string: Değişken boyutlu (Metin verileri için kullanılır.)
+                - bool: 1 byte (true veya false değerini tutar.)
+            */
+
+            // 2-) Bellek Kullanımı Karşılaştırması
+            /*
+                - int x = 5;         // 4 byte bellek kullanır.
+                - double y = 5.2;    // 8 byte bellek kullanır.
+                - string name = "Mehmet"; // String değişkeni, karakter uzunluğuna bağlı olarak değişken boyutta bellek kullanır.
+            */
+
+            // 3-) Kullanıcıdan İki Sayı Alıp Toplamını Ekrana Yazdıran Program
+            Console.Write("Birinci sayıyı girin: ");
+            double sayi1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("İkinci sayıyı girin: ");
+            double sayi2 = Convert.ToDouble(Console.ReadLine());
+
+            double toplam = sayi1 + sayi2;
+            Console.WriteLine($"Girilen sayıların toplamı: {toplam}");
+        }
+    }
+}
