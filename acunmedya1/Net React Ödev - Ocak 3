@@ -1,0 +1,55 @@
+using System;
+
+namespace CSharpConditionals
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1-) Koşullu İfadeler (if-else) Ne İşe Yarar? Gerçek Hayattan Örnek
+            /*
+                - if-else, belirli bir koşula bağlı olarak farklı işlemler gerçekleştirmek için kullanılır.
+                - Gerçek Hayat Örneği: 
+                    "Eğer hava yağmurluysa şemsiye al, değilse gerek yok."
+                    if (havaDurumu == "yağmurlu")
+                    {
+                        Console.WriteLine("Şemsiyeni al!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Şemsiyeye gerek yok.");
+                    }
+            */
+
+            // 2-) Kullanıcıdan Bir Sayı Alıp Tek mi Çift mi Olduğunu Bulan Program
+            Console.Write("Bir sayı girin: ");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+
+            if (sayi % 2 == 0)
+            {
+                Console.WriteLine("Girilen sayı çifttir.");
+            }
+            else
+            {
+                Console.WriteLine("Girilen sayı tektir.");
+            }
+
+            // 3-) Girilen Bir Sayının Pozitif, Negatif veya Sıfır Olduğunu Belirleyen Program
+            Console.Write("Bir sayı girin: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (num > 0)
+            {
+                Console.WriteLine("Girilen sayı pozitiftir.");
+            }
+            else if (num < 0)
+            {
+                Console.WriteLine("Girilen sayı negatiftir.");
+            }
+            else
+            {
+                Console.WriteLine("Girilen sayı sıfırdır.");
+            }
+        }
+    }
+}
